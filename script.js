@@ -245,6 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const embalagemGrandes = data.get('embalagem-grandes');
             const embalagemMiudezas = data.get('embalagem-miudezas');
             const personalOrganizer = data.get('personal-organizer');
+            const observacao = data.get('observacao').trim();
 
             const mensagem = [
                 'Olá! Gostaria de um orçamento de mudança. Seguem os detalhes:',
@@ -253,7 +254,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 `📍 Endereço de destino: ${destino}`,
                 `📦 Embalagem para itens grandes/frágeis: ${embalagemGrandes}`,
                 `🧰 Embalagem de miudezas: ${embalagemMiudezas}`,
-                `🧹 Personal organizer: ${personalOrganizer}`
+                `🧹 Personal organizer: ${personalOrganizer}`,
+                ...(observacao ? [`📝 Observação: ${observacao}`] : [])
             ].join('\n');
 
             const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
