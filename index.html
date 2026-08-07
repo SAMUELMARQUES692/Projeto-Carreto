@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVA | Mudanças e Fretes em Baú Fechado</title>
+    <meta name="description" content="Mudanças e fretes com furgão baú fechado — carga protegida da retirada à entrega, sem lona e sem exposição à rua. Orçamento pelo WhatsApp.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambiente: luz difusa atrás do painel de vidro -->
+    <div class="bg-ambient"></div>
+
+    <!-- Command Bar: nav fixa flutuante com cápsulas de vidro -->
+    <header class="command-bar" id="site-header">
+        <div class="command-bar-inner">
+            <!-- Logo -->
+            <a href="#" class="logo" id="logo">
+                <span class="logo-mark"><span></span><span></span><span></span></span>
+                <span class="logo-text">
+                    <span class="logo-word">Mova</span>
+                    <span class="logo-sub">Baú Fechado</span>
+                </span>
+            </a>
+
+            <!-- Navegação -->
+            <nav class="main-nav">
+                <ul class="nav-capsule">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ações do header -->
+            <div class="header-actions">
+                <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento!" target="_blank" class="btn btn-candy btn-header">
+                    <span>Pedir Orçamento</span>
+                    <span class="btn-icon-chip">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                    </span>
+                </a>
+
+                <!-- Botão de menu mobile (hamburguer em CSS puro) -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu mobile -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">Início</a></li>
+                <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
+                <li><a href="#como-funciona" class="mobile-nav-link">Como Funciona</a></li>
+                <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
+                <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+                <li class="mobile-nav-cta">
+                    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento!" target="_blank" class="btn btn-candy full-width">
+                        Pedir Orçamento
+                        <span class="btn-icon-chip">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    <!-- Painel de vidro: hero -->
+    <section id="home">
+        <div class="console-panel animate-panel">
+            <div class="hero-container">
+
+                <!-- Coluna esquerda: mensagem e ações -->
+                <div class="hero-content">
+                    <div class="eyebrow-row animate-fade-up">
+                        <span class="badge-pill">
+                            <span class="ping"></span>
+                            <span class="idx">N.01</span>
+                            Furgão Baú · Renault Master
+                        </span>
+                    </div>
+
+                    <h1 class="hero-title animate-fade-up" style="animation-delay: 90ms;">
+                        Sua mudança viaja <span class="highlight">dentro do baú</span>, fechada do início ao fim
+                    </h1>
+
+                    <p class="hero-subtitle animate-fade-up" style="animation-delay: 180ms;">
+                        Nada de lona, nada de chuva na carga, nada exposto na rua. Transporte em furgão baú fechado, com a rota combinada e a retirada agendada no seu horário — não no nosso.
+                    </p>
+
+                    <div class="hero-actions animate-fade-up" style="animation-delay: 270ms;">
+                        <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento!" target="_blank" class="btn btn-candy">
+                            Pedir Orçamento no WhatsApp
+                            <span class="btn-icon-chip">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                            </span>
+                        </a>
+                        <a href="#servicos" class="btn btn-glass">
+                            Ver os Serviços
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="stat-row animate-fade-up" style="animation-delay: 360ms;">
+                        <div class="stat-item">
+                            <span class="stat-idx">01</span>
+                            <span class="stat-label">Baú 100%<br>Fechado</span>
+                        </div>
+                        <div class="curve-sep"></div>
+                        <div class="stat-item">
+                            <span class="stat-idx">02</span>
+                            <span class="stat-label">Mudanças<br>Residenciais</span>
+                        </div>
+                        <div class="curve-sep"></div>
+                        <div class="stat-item">
+                            <span class="stat-idx">03</span>
+                            <span class="stat-label">Fretes<br>Comerciais</span>
+                        </div>
+                        <div class="curve-sep"></div>
+                        <div class="stat-item">
+                            <span class="stat-idx">04</span>
+                            <span class="stat-label">Orçamento via<br>WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna direita: veículo real dentro do painel + anotações -->
+                <div class="hero-visual animate-reveal">
+                    <div class="visual-card">
+                        <span class="status-chip">
+                            <span class="ping"></span>
+                            Baú Fechado · Em Operação
+                        </span>
+
+                        <div class="visual-wrapper">
+                            <div class="truck-reflection"></div>
+                            <img src="img/bau_fundo_transparente_HD.png" alt="Furgão baú Renault Master da MOVA, veículo utilizado nas mudanças e fretes" class="truck-image" id="truck-image">
+                        </div>
+                    </div>
+
+                    <div class="annotation ann-chassis" style="--delay: 0s; --y-offset: -8px;">
+                        <div class="annotation-inner">
+                            <span class="annotation-idx">01</span>
+                            <span class="annotation-text">
+                                <span class="annotation-title">Renault Master</span>
+                                <span class="annotation-sub">Chassi para carga</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="annotation ann-bau" style="--delay: 1.8s; --y-offset: 10px;">
+                        <div class="annotation-inner">
+                            <span class="annotation-idx">02</span>
+                            <span class="annotation-text">
+                                <span class="annotation-title">Baú Fechado</span>
+                                <span class="annotation-sub">Sem lona, sem chuva</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="annotation ann-rota" style="--delay: 3.4s; --y-offset: -10px;">
+                        <div class="annotation-inner">
+                            <span class="annotation-idx">03</span>
+                            <span class="annotation-text">
+                                <span class="annotation-title">Rota Planejada</span>
+                                <span class="annotation-sub">Retirada no horário</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Painel de vidro: serviços -->
+    <section id="servicos">
+        <div class="console-panel">
+
+            <div class="section-head">
+                <span class="badge-pill reveal-el">
+                    <span class="ping"></span>
+                    <span class="idx">N.02</span>
+                    Nossos Serviços
+                </span>
+
+                <h2 class="section-title">
+                    <span class="reveal-el" style="animation-delay: 80ms;">Cabe tudo</span>
+                    <span class="reveal-el highlight" style="animation-delay: 160ms;">dentro do baú.</span>
+                </h2>
+
+                <p class="section-lead reveal-el" style="animation-delay: 240ms;">
+                    Da mudança completa ao frete avulso — se cabe no baú fechado, a MOVA carrega com o mesmo cuidado, a mesma rota combinada e o mesmo horário certo.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card flashlight-card reveal-el" style="animation-delay: 80ms;">
+                    <span class="service-idx">01</span>
+                    <span class="service-icon-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0 7-7 7 7M5 10v10a1 1 0 0 0 1 1h3m10-11 2 2M19 10v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6"/></svg>
+                    </span>
+                    <h3 class="service-title">Mudança Residencial</h3>
+                    <p class="service-desc">Do apartamento à casa nova: móveis, caixas e eletrodomésticos embarcados no baú fechado, sem exposição à rua ou à chuva.</p>
+                    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20mudança%20residencial!" target="_blank" class="service-link">
+                        Solicitar
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </article>
+
+                <article class="service-card flashlight-card reveal-el" style="animation-delay: 160ms;">
+                    <span class="service-idx">02</span>
+                    <span class="service-icon-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </span>
+                    <h3 class="service-title">Mudança Comercial</h3>
+                    <p class="service-desc">Transferência de escritórios, lojas e pequenos comércios com o mínimo de parada na operação do seu negócio.</p>
+                    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20mudança%20comercial!" target="_blank" class="service-link">
+                        Solicitar
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </article>
+
+                <article class="service-card flashlight-card reveal-el" style="animation-delay: 240ms;">
+                    <span class="service-idx">03</span>
+                    <span class="service-icon-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg>
+                    </span>
+                    <h3 class="service-title">Frete Expresso</h3>
+                    <p class="service-desc">Coleta e entrega avulsa no mesmo dia, para quem precisa despachar uma carga com rota e horário definidos.</p>
+                    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20frete%20expresso!" target="_blank" class="service-link">
+                        Solicitar
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </article>
+
+                <article class="service-card flashlight-card reveal-el" style="animation-delay: 320ms;">
+                    <span class="service-idx">04</span>
+                    <span class="service-icon-chip">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12"/></svg>
+                    </span>
+                    <h3 class="service-title">Cargas Especiais</h3>
+                    <p class="service-desc">Móveis grandes, eletrodomésticos e itens frágeis, fixados e protegidos dentro do baú durante todo o trajeto.</p>
+                    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20carga%20especial!" target="_blank" class="service-link">
+                        Solicitar
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                </article>
+            </div>
+
+            <div class="cargo-marquee reveal-el">
+                <span class="marquee-fade left"></span>
+                <span class="marquee-fade right"></span>
+                <div class="marquee-track">
+                    <div class="marquee-content">
+                        <span class="cargo-chip">Sofás e Estofados</span>
+                        <span class="cargo-chip">Eletrodomésticos</span>
+                        <span class="cargo-chip">Caixas e Volumes</span>
+                        <span class="cargo-chip">Móveis Planejados</span>
+                        <span class="cargo-chip">Eletrônicos</span>
+                        <span class="cargo-chip">Cargas Fracionadas</span>
+                        <span class="cargo-chip">Itens Frágeis</span>
+                        <span class="cargo-chip">Mudanças Completas</span>
+                        <span class="cargo-chip">Sofás e Estofados</span>
+                        <span class="cargo-chip">Eletrodomésticos</span>
+                        <span class="cargo-chip">Caixas e Volumes</span>
+                        <span class="cargo-chip">Móveis Planejados</span>
+                        <span class="cargo-chip">Eletrônicos</span>
+                        <span class="cargo-chip">Cargas Fracionadas</span>
+                        <span class="cargo-chip">Itens Frágeis</span>
+                        <span class="cargo-chip">Mudanças Completas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta reveal-el">
+                <p class="section-cta-text">Não achou o serviço exato? Descreva a carga e a gente encaixa no baú.</p>
+                <div class="services-cta-actions">
+                    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento!" target="_blank" class="btn btn-candy">
+                        Pedir Orçamento no WhatsApp
+                        <span class="btn-icon-chip">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Painel de vidro: como funciona -->
+    <section id="como-funciona">
+        <div class="console-panel">
+
+            <div class="section-head">
+                <span class="badge-pill reveal-el">
+                    <span class="ping"></span>
+                    <span class="idx">N.03</span>
+                    Como Funciona
+                </span>
+
+                <h2 class="section-title">
+                    <span class="reveal-el" style="animation-delay: 80ms;">Quatro passos.</span>
+                    <span class="reveal-el highlight" style="animation-delay: 160ms;">Do pedido à entrega.</span>
+                </h2>
+
+                <p class="section-lead reveal-el" style="animation-delay: 240ms;">
+                    Cada etapa combinada com você antes de qualquer coisa sair do lugar — sem surpresa na rota, no horário ou no valor.
+                </p>
+            </div>
+
+            <div class="process-list" id="process-list">
+                <div class="process-track">
+                    <div class="process-track-fill" id="process-fill"></div>
+                </div>
+
+                <div class="process-step reveal-el" style="animation-delay: 80ms;">
+                    <span class="process-node"><span class="process-node-idx">01</span></span>
+                    <div class="process-body">
+                        <h3 class="process-title">Solicitação</h3>
+                        <p class="process-desc">Manda a lista do que precisa mudar pelo WhatsApp — endereços, volume aproximado e itens que exigem mais cuidado. Sem formulário, sem cadastro.</p>
+                    </div>
+                </div>
+
+                <div class="process-step reveal-el" style="animation-delay: 160ms;">
+                    <span class="process-node"><span class="process-node-idx">02</span></span>
+                    <div class="process-body">
+                        <h3 class="process-title">Orçamento e Agendamento</h3>
+                        <p class="process-desc">Você recebe o valor fechado e escolhe a data. A retirada é marcada no seu horário — não numa janela de "período da manhã".</p>
+                    </div>
+                </div>
+
+                <div class="process-step reveal-el" style="animation-delay: 240ms;">
+                    <span class="process-node"><span class="process-node-idx">03</span></span>
+                    <div class="process-body">
+                        <h3 class="process-title">Coleta em Baú Fechado</h3>
+                        <p class="process-desc">O furgão chega no horário combinado. Carga embarcada e fixada dentro do baú, protegida da rua e da chuva antes mesmo de sair do lugar.</p>
+                    </div>
+                </div>
+
+                <div class="process-step reveal-el" style="animation-delay: 320ms;">
+                    <span class="process-node"><span class="process-node-idx">04</span></span>
+                    <div class="process-body">
+                        <h3 class="process-title">Entrega e Conferência</h3>
+                        <p class="process-desc">Rota direta até o destino. Descarregamento acompanhado e conferência final com você, item por item.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta reveal-el">
+                <p class="section-cta-text">Pronto para marcar a data? É só chamar no WhatsApp e combinar os detalhes.</p>
+                <div class="services-cta-actions">
+                    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20agendar%20uma%20mudança!" target="_blank" class="btn btn-candy">
+                        Agendar pelo WhatsApp
+                        <span class="btn-icon-chip">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Painel de vidro: sobre -->
+    <section id="sobre">
+        <div class="console-panel">
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-head" style="margin-bottom: 28px;">
+                        <span class="badge-pill reveal-el">
+                            <span class="ping"></span>
+                            <span class="idx">N.04</span>
+                            Sobre a MOVA
+                        </span>
+
+                        <h2 class="section-title">
+                            <span class="reveal-el" style="animation-delay: 80ms;">Menos promessa.</span>
+                            <span class="reveal-el highlight" style="animation-delay: 160ms;">Mais rota cumprida.</span>
+                        </h2>
+                    </div>
+
+                    <div class="about-text">
+                        <p class="reveal-el" style="animation-delay: 220ms;">
+                            A MOVA nasceu de um problema simples: mudança deveria ser combinada, não arriscada. Trabalhamos com um único tipo de veículo — furgão baú fechado — porque ele resolve o que mais preocupa quem muda de endereço: chuva, poeira, curiosos e carga solta na rua. Não é sobre ter a frota mais bonita, é sobre ter a frota certa para o trabalho.
+                        </p>
+                        <p class="reveal-el" style="animation-delay: 280ms;">
+                            Cada mudança começa com uma conversa direta pelo WhatsApp: o que vai ser transportado, para onde e em que horário. A partir daí, a rota é combinada e o compromisso é cumprido — sem letra miúda, sem taxa surpresa.
+                        </p>
+                    </div>
+
+                    <div class="about-pillars">
+                        <div class="pillar-card flashlight-card reveal-el" style="animation-delay: 100ms;">
+                            <span class="service-idx">01</span>
+                            <h3 class="service-title">Precisão</h3>
+                            <p class="service-desc">Horário combinado é horário cumprido — sem "janela da manhã".</p>
+                        </div>
+                        <div class="pillar-card flashlight-card reveal-el" style="animation-delay: 160ms;">
+                            <span class="service-idx">02</span>
+                            <h3 class="service-title">Baú Fechado</h3>
+                            <p class="service-desc">Toda carga protegida da rua, da chuva e de mãos curiosas.</p>
+                        </div>
+                        <div class="pillar-card flashlight-card reveal-el" style="animation-delay: 220ms;">
+                            <span class="service-idx">03</span>
+                            <h3 class="service-title">Comunicação Direta</h3>
+                            <p class="service-desc">Do orçamento à entrega, tudo combinado com você por WhatsApp.</p>
+                        </div>
+                        <div class="pillar-card flashlight-card reveal-el" style="animation-delay: 280ms;">
+                            <span class="service-idx">04</span>
+                            <h3 class="service-title">Sem Letra Miúda</h3>
+                            <p class="service-desc">O valor combinado é o valor cobrado. Sem taxa surpresa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual reveal-el" style="animation-delay: 160ms;">
+                    <div class="panel-card">
+                        <span class="badge-pill">
+                            <span class="ping"></span>
+                            Equipe MOVA
+                        </span>
+
+                        <p class="panel-statement">"Não vendemos <span class="highlight">mudança</span>. Cumprimos rota."</p>
+
+                        <div class="panel-check-list">
+                            <div class="panel-check-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>Baú 100% fechado, em todo trajeto</span>
+                            </div>
+                            <div class="panel-check-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>Rota e horário combinados antes da coleta</span>
+                            </div>
+                            <div class="panel-check-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>Orçamento fechado, sem taxa surpresa</span>
+                            </div>
+                            <div class="panel-check-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>Atendimento direto, do início ao fim</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta reveal-el">
+                <p class="section-cta-text">Quer conhecer a operação antes de fechar? A gente explica cada etapa pelo WhatsApp.</p>
+                <div class="services-cta-actions">
+                    <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20conhecer%20mais%20sobre%20a%20MOVA!" target="_blank" class="btn btn-candy">
+                        Falar com a MOVA
+                        <span class="btn-icon-chip">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Painel de vidro: contato -->
+    <section id="contato">
+        <div class="console-panel">
+
+            <div class="contact-grid">
+                <div class="contact-content">
+                    <div class="section-head" style="margin-bottom: 28px;">
+                        <span class="badge-pill reveal-el">
+                            <span class="ping"></span>
+                            <span class="idx">N.05</span>
+                            Contato
+                        </span>
+
+                        <h2 class="section-title">
+                            <span class="reveal-el" style="animation-delay: 80ms;">Vamos combinar</span>
+                            <span class="reveal-el highlight" style="animation-delay: 160ms;">sua próxima mudança?</span>
+                        </h2>
+
+                        <p class="section-lead reveal-el" style="animation-delay: 240ms;">
+                            Fale direto com a gente pelo canal que preferir. Sem formulário, sem fila de atendimento — só uma conversa com gente de verdade.
+                        </p>
+                    </div>
+
+                    <div class="contact-methods">
+                        <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento!" target="_blank" class="service-card flashlight-card reveal-el" style="animation-delay: 100ms;">
+                            <span class="service-idx">01</span>
+                            <span class="service-icon-chip">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            </span>
+                            <h3 class="service-title">WhatsApp</h3>
+                            <p class="service-desc">(00) 00000-0000 — canal mais rápido, resposta em poucos minutos.</p>
+                        </a>
+
+                        <a href="tel:+5500000000000" class="service-card flashlight-card reveal-el" style="animation-delay: 160ms;">
+                            <span class="service-idx">02</span>
+                            <span class="service-icon-chip">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </span>
+                            <h3 class="service-title">Telefone</h3>
+                            <p class="service-desc">(00) 0000-0000 — atendemos no mesmo horário do WhatsApp.</p>
+                        </a>
+
+                        <a href="mailto:contato@movabau.com.br" class="service-card flashlight-card reveal-el" style="animation-delay: 220ms;">
+                            <span class="service-idx">03</span>
+                            <span class="service-icon-chip">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+                            </span>
+                            <h3 class="service-title">E-mail</h3>
+                            <p class="service-desc">contato@movabau.com.br — para orçamentos detalhados e parcerias.</p>
+                        </a>
+
+                        <div class="service-card flashlight-card reveal-el" style="animation-delay: 280ms;">
+                            <span class="service-idx">04</span>
+                            <span class="service-icon-chip">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </span>
+                            <h3 class="service-title">Atendimento</h3>
+                            <p class="service-desc">Seg a Sex, 8h às 18h · Sáb, 8h às 13h. Fora do horário, deixe sua mensagem.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-visual reveal-el" style="animation-delay: 160ms;">
+                    <div class="panel-card">
+                        <span class="badge-pill">
+                            <span class="ping"></span>
+                            Resposta Rápida
+                        </span>
+
+                        <p class="panel-statement">Chama a gente no <span class="highlight">WhatsApp</span> e resolve sua mudança ainda hoje.</p>
+
+                        <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20um%20orçamento!" target="_blank" class="btn btn-candy full-width">
+                            Chamar no WhatsApp
+                            <span class="btn-icon-chip">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                            </span>
+                        </a>
+
+                        <div class="panel-check-list">
+                            <div class="panel-check-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>Furgão baú 100% fechado</span>
+                            </div>
+                            <div class="panel-check-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>Orçamento sem compromisso</span>
+                            </div>
+                            <div class="panel-check-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>Atendimento em [Sua Cidade] e região</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="#home" class="logo">
+                <span class="logo-mark"><span></span><span></span><span></span></span>
+                <span class="logo-text">
+                    <span class="logo-word">Mova</span>
+                    <span class="logo-sub">Baú Fechado</span>
+                </span>
+            </a>
+
+            <nav class="footer-nav">
+                <a href="#home">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <p class="footer-copy">© 2026 MOVA — Mudanças e Fretes em Baú Fechado.</p>
+        </div>
+    </footer>
+
+    <!-- Cursor customizado (mira/crosshair) -->
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
