@@ -1,4 +1,4 @@
-/* MOVA — Projeto Carreto N2
+/* Marcelo Fretes — Projeto Carreto N2
    Conceito: a identidade técnica do N1 (baú fechado, precisão, mono/blueprint)
    vista através de um "painel de instrumentos" — vidro, cantos arredondados,
    botões glossy, indicadores de status — linguagem do design system Genlabs/Aura. */
@@ -708,7 +708,7 @@ main > section:not(:first-child) .console-panel { margin-top: 0; }
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-bottom: 52px;
 }
@@ -1135,7 +1135,6 @@ main > section:not(:first-child) .console-panel { margin-top: 0; }
 /* --- RESPONSIVO --- */
 @media (max-width: 1200px) {
     .console-panel { padding: 3.5rem 2.5rem; margin: 110px 20px 48px; }
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-inner { padding: 40px 2.5rem 48px; }
 }
 

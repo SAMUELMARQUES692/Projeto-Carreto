@@ -1,4 +1,4 @@
-/* MOVA — Projeto Carreto N2: interação e movimento (Vanilla JS) */
+/* Marcelo Fretes — Projeto Carreto N2: interação e movimento (Vanilla JS) */
 
 document.addEventListener('DOMContentLoaded', () => {
 
