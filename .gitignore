@@ -1,0 +1,6 @@
+# Referências de design/animação (uso local, não vai para o repositório)
+templates/
+
+# Sistema
+.DS_Store
+Thumbs.db
