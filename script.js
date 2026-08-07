@@ -200,4 +200,67 @@ document.addEventListener('DOMContentLoaded', () => {
         const observer = new MutationObserver(updateClickableListeners);
         observer.observe(document.body, { childList: true, subtree: true });
     }
+
+    // --- MODAL DE ORÇAMENTO: questionário antes de seguir pro WhatsApp ---
+    const WHATSAPP_NUMBER = '5511984563115';
+
+    const orcamentoOverlay = document.getElementById('orcamento-overlay');
+    const orcamentoModal = document.querySelector('.orcamento-modal');
+    const orcamentoForm = document.getElementById('orcamento-form');
+    const orcamentoClose = document.getElementById('orcamento-close');
+    const orcamentoTriggers = document.querySelectorAll('.js-open-orcamento');
+
+    if (orcamentoOverlay && orcamentoForm && orcamentoTriggers.length) {
+        const openOrcamento = (e) => {
+            e.preventDefault();
+            orcamentoOverlay.classList.add('open');
+            orcamentoOverlay.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('no-scroll');
+        };
+
+        const closeOrcamento = () => {
+            orcamentoOverlay.classList.remove('open');
+            orcamentoOverlay.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('no-scroll');
+        };
+
+        orcamentoTriggers.forEach(trigger => trigger.addEventListener('click', openOrcamento));
+
+        orcamentoClose.addEventListener('click', closeOrcamento);
+
+        orcamentoOverlay.addEventListener('click', (e) => {
+            if (!orcamentoModal.contains(e.target)) closeOrcamento();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && orcamentoOverlay.classList.contains('open')) closeOrcamento();
+        });
+
+        orcamentoForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const data = new FormData(orcamentoForm);
+            const origem = data.get('origem').trim();
+            const destino = data.get('destino').trim();
+            const embalagemGrandes = data.get('embalagem-grandes');
+            const embalagemMiudezas = data.get('embalagem-miudezas');
+            const personalOrganizer = data.get('personal-organizer');
+
+            const mensagem = [
+                'Olá! Gostaria de um orçamento de mudança. Seguem os detalhes:',
+                '',
+                `📍 Endereço de saída: ${origem}`,
+                `📍 Endereço de destino: ${destino}`,
+                `📦 Embalagem para itens grandes/frágeis: ${embalagemGrandes}`,
+                `🧰 Embalagem de miudezas: ${embalagemMiudezas}`,
+                `🧹 Personal organizer: ${personalOrganizer}`
+            ].join('\n');
+
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+
+            closeOrcamento();
+            orcamentoForm.reset();
+        });
+    }
 });
